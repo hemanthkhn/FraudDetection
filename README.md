@@ -6,30 +6,33 @@ This repository contains the code to test a machine learning model deployed loca
 
 Make sure you have the following packages installed:
 
-- Python 3.6+
-- numpy==1.19.5
-- pandas==1.2.5
-- protobuf==3.19.1
-- pytest==6.2.5
-- requests==2.25.1
-- streamlit==0.76.0
+- Python 3.10
+- numpy==1.24.4
+- pandas==2.0.3
+- pyspark==3.5.0
+- pytest==6.2.3
+- streamlit==1.29.0
 
-## 1. Storing the Model Locally
+## 1. Exporting the Model
 
-- Save the trained fraud detection model as 'model.pkl'.
+- Save the trained fraud detection model as 'trained_model.sav'.
 
 ## 2. Hosting the Model Locally
 
 - Use Streamlit to host the model locally.
-- Update the 'app.py' file with the path to the locally saved 'model.pkl'.
+- Update the 'Fraud_ml.py' file with the path to the locally saved 'trained_model.sav'.
 
-## Configuration in 'app.py'
+## Configuration in 'Fraud_ml.py'
 
-Update the 'app.py' file with the following configurations:
+Update the 'Fraud_ml.py' file with the following configurations:
 
 ```python
 # Local model path
-MODEL_PATH = 'path/to/your/local/model.pkl'
+MODEL_PATH = 'path/to/your/local/trained_model.sav'
+# To run the webapp
+# Go to terminal and enter the below line
+streamlit run fraud_prediction_app.py
 
-# Streamlit app configurations
-# Add any additional configurations needed for the Streamlit app
+
+
+
